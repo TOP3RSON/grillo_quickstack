@@ -8,7 +8,7 @@ services:
       - evolution_instances:/evolution/instances
       - evolution_store:/evolution/store
     environment:
-      - SERVER_URL=https://api.evolution.website.com
+      - SERVER_URL=https://api.evolution.grillo.tec.br
       - SERVER_PORT=8080
       - DOCKER_ENV=true
 
@@ -61,7 +61,7 @@ services:
           memory: 256M
       labels:
         - traefik.enable=true
-        - traefik.http.routers.evolution.rule=Host(`api.evolution.website.com`)
+        - traefik.http.routers.evolution.rule=Host(`api.evolution.grillo.tec.br`)
         - traefik.http.routers.evolution.entrypoints=websecure
         - traefik.http.routers.evolution.tls.certresolver=letsencryptresolver
         - traefik.http.routers.evolution.priority=2
